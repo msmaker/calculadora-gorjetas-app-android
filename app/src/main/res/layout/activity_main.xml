@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <TextView
-        android:id="@+id/textGorjeta"
+        android:id="@+id/textView"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -76,11 +76,11 @@
         android:padding="5dp"
         android:text="Gorjeta"
         android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textGorjeta"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/textGorjeta"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -94,11 +94,11 @@
         android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textGorjeta"
+        app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/seekBarGorjeta" />
 
     <TextView
-        android:id="@+id/textTotal"
+        android:id="@+id/textView2"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -107,11 +107,11 @@
         android:text="Total"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textTotal"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/textTotal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -124,7 +124,7 @@
         android:inputType="textPersonName"
         android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textTotal"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textGorjeta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

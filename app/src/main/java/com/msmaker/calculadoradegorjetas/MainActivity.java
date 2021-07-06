@@ -12,8 +12,8 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText editValor;
     private TextView textProcentagem;
-    private TextView textGorjeta;
-    private TextView textTotal;
+    private EditText textGorjeta;
+    private EditText textTotal;
     private SeekBar seekBarGorjeta;
 
     private double porcentagem = 0;
@@ -58,6 +58,17 @@ public class MainActivity extends AppCompatActivity {
                     "Digite um valor primeiro",
                     Toast.LENGTH_SHORT).show();
         } else {
+            //Converte string para double
+            double valorDigitado = Double.parseDouble((valorRecuperado));
+
+            //calcula a gorjeta toral
+            double gorjeta = valorDigitado * (porcentagem / 100);
+            double total = gorjeta + valorDigitado;
+
+            //exibe a gorjeta e total
+            textGorjeta.setText(("R$" + Math.round(gorjeta*100.0)/100.0));
+            textTotal.setText(("R$" + Math.round(total)));
+
 
         }
     }
